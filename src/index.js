@@ -7,4 +7,4 @@ const app = express();
 app.use(express.json());
 app.use(indexRoutes);
 
-app.listen(PORT);
+app.listen(4000);
