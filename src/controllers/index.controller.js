@@ -9,6 +9,6 @@ export const postRegister = async (req, res) => {
     );
     res.send({ rows });
   } catch {
-    return res.status(500).json({ message: "Algo va mal" });
+    return res.status(500).json({ rows });
   }
 };
