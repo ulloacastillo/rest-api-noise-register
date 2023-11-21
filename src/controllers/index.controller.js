@@ -2,10 +2,10 @@ import { pool } from "../db.js";
 
 export const postRegister = async (req, res) => {
   try {
-    const { intensity } = req.body;
+    const { intensity, date } = req.body;
     const [rows] = await pool.query(
-      "INSERT INTO register (intensity) VALUES (?)",
-      [intensity]
+      "INSERT INTO register (intensity, date) VALUES (?, ?)",
+      [intensity, date]
     );
     res.send({ rows });
   } catch {
