@@ -25,9 +25,7 @@ export const getRegisters = async (req, res) => {
     let data = rows.map((req) => {
       return {
         ...req,
-        dateregister: formateador.format(
-          new Date(req.dateregister.setHours(req.dateregister.getHours() - 3))
-        ),
+        dateregister: formateador.format(new Date(req.dateregister)),
       };
     });
 
